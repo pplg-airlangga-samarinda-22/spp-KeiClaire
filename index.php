@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button><a href="admin/kelas.php">Kelas</a></button>
     <button><a href="logout.php">Logout</a></button>
     <h3>Halo Selamat Datang di Aplikasi Pembayaran SPP</h3>
     <p>Aplikasi ini dibuat oleh Rizal Dwi Ristiadi from SMKTI Airlangga <br>
