@@ -1,13 +1,11 @@
 <?php
 require '../koneksi.php';
 
-// Ambil Data Berdasarkan ID
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $data = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM kelas WHERE id_kelas=$id"));
 }
 
-// Proses Edit Data
 if (isset($_POST['edit'])) {
     $id = $_POST['id_kelas'];
     $nama_kelas = $_POST['nama_kelas'];

@@ -1,14 +1,12 @@
 <?php
 require '../koneksi.php';
 
-// Hapus Data
 if (isset($_GET['hapus'])) {
     $id = $_GET['hapus'];
     mysqli_query($koneksi, "DELETE FROM kelas WHERE id_kelas=$id");
     header("Location: kelas.php");
 }
 
-// Ambil Data untuk Tabel
 $kelas = mysqli_query($koneksi, "SELECT * FROM kelas");
 ?>
 
@@ -26,7 +24,7 @@ $kelas = mysqli_query($koneksi, "SELECT * FROM kelas");
 
     <table border="1">
         <tr>
-            <th>No</th> <!-- Tambah kolom nomor -->
+            <th>No</th> 
             <th>Nama Kelas</th>
             <th>Kompetensi Keahlian</th>
             <th>Aksi</th>
@@ -34,7 +32,7 @@ $kelas = mysqli_query($koneksi, "SELECT * FROM kelas");
         <?php $no = 1; ?>
         <?php while ($row = mysqli_fetch_assoc($kelas)) : ?>
         <tr>
-            <td><?= $no++; ?></td> <!-- Menampilkan nomor urut -->
+            <td><?= $no++; ?></td> 
             <td><?= $row['nama_kelas']; ?></td>
             <td><?= $row['kompetensi_keahlian']; ?></td>
             <td>
